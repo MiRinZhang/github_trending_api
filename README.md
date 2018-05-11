@@ -4,6 +4,16 @@
 
 #### Usage
 
+* RUN
+
+`npm start` or `yarn start`
+
+* DEV
+
+`npm run dev` or `yarn dev`
+
+#### API
+
 > `/api/:type?since=:since`
 
 * e.g.
