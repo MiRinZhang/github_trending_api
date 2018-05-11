@@ -1,7 +1,3 @@
-/**
- * 解析 github trending 列表
- */
-
 module.exports = (selector: string) => {
 	const SITE = 'https://www.github.com',
 		$items: NodeListOf<HTMLElement> = document.querySelectorAll(selector);
