@@ -1,0 +1,10 @@
+{
+  "exec": "ts-node",
+  "watch": [
+    "src/**/*.ts"
+  ],
+  "ignore": [
+    "node_modules/*"
+  ],
+  "delay": 100
+}
