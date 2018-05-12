@@ -15,6 +15,11 @@ declare module Github {
 		name: string;
 	}
 
+	export interface Crawler {
+		repository: Function;
+		developer: Function;
+	}
+
 	export interface User {
 		login: string;
 		id: number;
