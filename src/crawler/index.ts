@@ -6,7 +6,10 @@ module.exports = {
 	async repositories(type: string, since: string): Promise<Array<Github.Trending>> {
 		const LIST_SELECTOR = '.explore-content ol li',
 
-			browser = await puppeteer.launch(),
+			browser = await puppeteer.launch({
+				headless: true,
+				args: ['--no-sandbox', '--disable-setuid-sandbox'],
+			}),
 			page = await browser.newPage(),
 
 			queryType = type ? `/${type}` : '',
@@ -24,7 +27,10 @@ module.exports = {
 	async developers(type: string, since: string): Promise<Array<Github.Developer>> {
 		const LIST_SELECTOR = '.explore-content ol li',
 
-			browser = await puppeteer.launch(),
+			browser = await puppeteer.launch({
+				headless: true,
+				args: ['--no-sandbox', '--disable-setuid-sandbox'],
+			}),
 			page = await browser.newPage(),
 
 			queryType = type ? `/${type}` : '',
