@@ -6,7 +6,6 @@ declare module Github {
 		fork: string;
 		description: string;
 		language: string;
-		site: string;
 		owners: Array<Owner>;
 	}
 
@@ -16,28 +15,24 @@ declare module Github {
 	}
 
 	export interface Crawler {
-		repository: Function;
-		developer: Function;
+		repositories(type: string, since: string): Promise<Array<Github.Trending>>
+
+		developers(type: string, since: string): Promise<Array<Github.Trending>>;
 	}
 
-	export interface User {
-		login: string;
-		id: number;
-		avatar_url: string;
-		url: string;
-		html_url: string;
-		name: string;
-		company: string;
-		blog: string;
-		location: string;
-		email: string;
-		bio: string;
-		public_repos: number;
-		public_gists: number;
-		followers: number;
-		following: number;
-		created_at: string;
+	export interface Parser {
+		repositories(selector: string): Array<Github.Trending>;
 
-		[propName: string]: any;
+		developers(selector: string): Array<Github.Trending>;
+	}
+
+	export interface Developer {
+		title: string;
+		rank: string;
+		avatar: string;
+		homePage: string;
+		repository: string;
+		repoName: string;
+		repoDesc: string;
 	}
 }

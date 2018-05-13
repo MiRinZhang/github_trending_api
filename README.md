@@ -14,13 +14,21 @@
 
 #### API
 
-> `/api/:type?since=:since`
+> *repositories*: `/api/repositories/:type?since=:since`
+>
+> *developers*: `/api/developers/:type?since=:since`
 
 * e.g.
 
 >
-> `/api` equal `https://www.github.com/trending`
+> `/api/repositories` equal `https://www.github.com/trending`
 >
-> `/api/javascript` equal `https://www.github.com/trending/javascript`
+> `/api/repositories/javascript` equal `https://www.github.com/trending/javascript`
 >
-> `/api/javascript?since=daily` equal `https://www.github.com/trending/javascript?since=daily`
+> `/api/repositories/javascript?since=daily` equal `https://www.github.com/trending/javascript?since=daily`
+>
+> `/api/developers` equal `https://www.github.com/developers`
+>
+> `/api/developers/javascript` equal `https://www.github.com/developers/javascript`
+>
+> `/api/developers/javascript?since=daily` equal `https://www.github.com/developers/javascript?since=daily`
