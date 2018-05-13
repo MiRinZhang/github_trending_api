@@ -2,7 +2,7 @@ const Koa = require('koa'),
 	logger = require('koa-logger'),
 	router = require('./router'),
 	app = new Koa(),
-	PORT = 4040;
+	PORT = 4041;
 
 app.use(logger());
 app.use(router.routes());
