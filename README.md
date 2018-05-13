@@ -18,7 +18,7 @@
 
 *Response*
 
-```
+```json
 [
     {
         "title": "cyanharlow / purecss-francine",
@@ -72,7 +72,7 @@
 
 *Response*
 
-```
+```json
 [
     {
         "title": "google(Google)",
