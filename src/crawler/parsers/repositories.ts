@@ -14,7 +14,8 @@ namespace Parsers {
 			const owners = Array.from($bottomS).map((owner: Element): Github.Owner => (
 					{
 						id: owner.getAttribute('data-hovercard-user-id') || '',
-						name: (owner.getAttribute('href') || '').slice(1),
+						name: owner.getAttribute('href').slice(1),
+						avatar: owner.querySelector('img').getAttribute('src'),
 					}
 				)
 			);

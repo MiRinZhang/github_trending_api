@@ -12,6 +12,7 @@ declare module Github {
 	export interface Owner {
 		id: string;
 		name: string;
+		avatar: string;
 	}
 
 	export interface Crawler {
