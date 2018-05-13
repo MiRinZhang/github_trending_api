@@ -23,8 +23,8 @@ namespace Parsers {
 				title: $title.textContent.trim(),
 				url: SITE + $title.getAttribute('href'),
 				description: ($subItem[2].textContent || '').trim(),
-				star: $bottomA[0].innerText,
-				fork: $bottomA[1].innerText,
+				star: $bottomA[0].innerText.trim(),
+				fork: $bottomA[1].innerText.trim(),
 				language: $lang.textContent.trim(),
 				owners,
 			}
